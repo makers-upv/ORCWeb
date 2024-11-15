@@ -1,14 +1,13 @@
 :root {
-    --numDays: 5;
-    --numHours: 7;
-    --timeHeight: 60px;
-    --calBgColor: #EDEDED;
-    /* --eventBorderColor: #f2d3d8; */
-    --eventColor1: #7abf9c;
-    --eventColor2: #a3c182;
-    --eventColor3: #70a0ae;
-  }
-
+  --numDays: 5;
+  --numHours: 7;
+  --timeHeight: 60px;
+  --calBgColor: #EDEDED;
+  /* --eventBorderColor: #f2d3d8; */
+  --eventColor1: var(--color3);
+  --eventColor2: var(--color2);
+  --eventColor3: var(--color1);
+}
   .title-calendar {
     display: flex;
     flex-direction: column;
