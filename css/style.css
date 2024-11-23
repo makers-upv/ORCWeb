@@ -1,8 +1,6 @@
 /* Mods by NAKKI (@nak.kiwi on insta)*/
 /* Original code from https://orchallenge.es */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
 
 :root {
     --color1: #F9CC3E;
@@ -547,12 +545,12 @@ body {
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 26%;
     flex-wrap: wrap;
 
     min-height: 30vh;
     width: 100%;
-    column-gap: 10px;
     background-color: var(--color1);
     /*This had an opacity but sue me*/
     /* background: linear-gradient(36deg, #094d91 0%, rgba(146,189,87,1) 100%); */
@@ -677,3 +675,53 @@ body {
               ▀▀ ▀▀  
     Hey!, you found Kiwi the Kiwi :D
 */
+
+/* Retos */
+.retos {
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 800px;
+
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.retos h2 {
+    margin-bottom: 0px;
+}
+.retos h3 {
+    font-family: "Rubik Mono One";
+    color: var(--color3);
+}
+.retos > p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.retos article p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.retos button {
+    font-weight: 300;
+    font-size: 16px;
+    border: 2px transparent solid;
+    border-radius: 15px;
+    padding: 8px 15px 8px 15px;
+    background-color: var(--color1);
+    transition: all 0.1s;
+}
+
+.retos button:hover {
+    background-color: var(--color2);
+    border: 2px black solid;
+}
+
+.retos button a {
+    color: var(--fontColor2);
+}
+
+#loadOverlay{
+    opacity: 0;
+    transition: all 1s;
+    pointer-events: none;
+}
