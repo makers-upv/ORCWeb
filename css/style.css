@@ -1,12 +1,15 @@
+/* 2024 mods by NAKKI (@nak.kiwi on insta)*/
+
 :root {
-    --color1: #296bad;
-    --color2: #97C575;
-    --color3: #ffe600;
-    --fontColor1: #000000;
-    --fontColor2: #fefdfb;
+    --color1: #F9CC3E;
+    --color2: #FF6A00;
+    --color3: #f9ae3e;
+    --fontColor1: #000;
+    --fontColor2: #000;
 }
 
-html, body {
+html,
+body {
     z-index: 0;
 }
 
@@ -15,21 +18,35 @@ html, body {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
     color: var(--fontColor1);
 }
 
 /* Nav */
-
 .logo {
     display: flex;
     align-items: center;
+    width: 63px;
+    height: 25px;
+    position: relative;
 }
 
+/* TODO: disable hidden and add to page */
 .logo-img {
-    width: 80px; /* Set the width */
+    width: 80px;
+    /* Set the width */
     height: auto;
+    display: none;
+}
+.logo::after {
+    content: "";
+    background-image: url("https://utfs.io/f/8JQcvMcXxzFviKKjeT0AjvMNZXQoWlKx7SCkH6yw9IfVPUeB");
+    background-size: cover;
+    width: 63px;
+    height: 45px;
+    position: relative;
+    top: 10px;
 }
 
 .nav {
@@ -49,13 +66,13 @@ html, body {
 }
 
 #nav {
-    background: rgb(9,77,145);
-    background: linear-gradient(36deg, #094d91 0%, rgba(146,189,87,0.6) 100%);
+    background: var(--color1);
+    background: linear-gradient(36deg, var(--color1) 0%, var(--color2) 100%);
 }
 
 .nav-scrolled {
-    background: rgb(9,77,145);
-    background: linear-gradient(36deg, #094d91 0%, rgba(146,189,87,0.6) 100%);
+    background: var(--color1);
+    background: linear-gradient(36deg, var(--color1) 0%, var(--color2) 100%);
 }
 
 .nav-links {
@@ -70,7 +87,10 @@ html, body {
 }
 
 .nav-links a {
+    box-sizing: border-box;
+    border: 2px solid transparent;
     cursor: pointer;
+    display: inline-block;
     font-size: 16px;
     border-radius: 20px;
     padding: 5px 13px;
@@ -82,11 +102,12 @@ html, body {
 }
 
 .nav-button:hover {
-    background-color: #cecece52;
+    border: 2px solid black;
+    background-color: #ff6a00;
 }
 
 .form-button {
-    border: 1.5px solid var(--fontColor2);
+    border: 3px solid var(--fontColor2);
     color: var(--fontColor2);
 }
 
@@ -105,7 +126,6 @@ html, body {
 }
 
 /* Small Screen */
-
 @media screen and (max-width: 650px) {
 
     .nav-links {
@@ -136,17 +156,17 @@ html, body {
     .nav-button:hover {
         background-color: #cecece52;
     }
-    
+
     .form-button {
         background-color: var(--color1);
         color: var(--fontColor2);
     }
-    
+
     .form-button:hover {
         background-color: #51a5d5;
         color: var(--fontColor2);
     }
-    
+
 
     .open {
         right: 0%;
@@ -163,8 +183,19 @@ html, body {
     height: 100vh;
     width: 100%;
     z-index: 1;
-    background: rgb(9,77,145);
-    background: linear-gradient(36deg, #094d91 0%, rgba(146,189,87,1) 100%); 
+    background: var(--color1);
+    background: linear-gradient(36deg, var(--color1) 0%, var(--color1) 100%);
+    /*TODO: change/delete gradient*/
+}
+
+.header::after {
+    content: "";
+    background-image: url(https://utfs.io/f/8JQcvMcXxzFvsin6xMcEngCsPXAV9DLif7aEpQoByq6zluTJ);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    mix-blend-mode: overlay;
 }
 
 .header-body {
@@ -173,26 +204,40 @@ html, body {
     position: absolute;
     top: 43%;
     left: 50%;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%, -40%);
     display: flex;
     flex-direction: row;
+}
+
+.header-body::after {
+    content: "";
+    background-image: url("https://utfs.io/f/8JQcvMcXxzFvwxSMY86pxvP2imLB8yJMNaFe3tqjUVX0rYAO");
+    position: absolute;
+    top: 120px;
+    left: 720px;
+    width: 500px;
+    height: 300px;
+    background-size: cover;
 }
 
 .titles {
     top: 40%;
     left: 0%;
-    transform: translate(0%,20%);
+    transform: translate(0%, 20%);
     text-align: left;
 }
 
 .titles h1 {
-    font-weight: 500;
     font-size: 101px;
     color: var(--fontColor2);
+
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .titles p {
-    font-weight: 200;
+    font-weight: 500;
     font-size: 20px;
     margin-bottom: 25px;
     color: var(--fontColor2);
@@ -203,13 +248,16 @@ html, body {
 }
 
 /* Second section */
-
 .second-section {
     /* min-height: 100vh; */
     margin: 10px;
+    padding: 7% 0 0 0;
+    
+    /* Center content */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 7% 0 0 0;
 }
 
 .second-section h2 {
@@ -225,7 +273,16 @@ html, body {
     padding: 0 7% 0 7%;
 }
 
-.second-section h2, .second-section p {
+* > h2, .intro > h1 {
+    color: var(--fontColor1) !important;
+    text-align: center !important;
+    font-family: "Rubik Mono One" !important;
+    text-shadow: 0px 4px 0px var(--color1) !important;
+    
+}
+/*Todo: remove other h2 styles*/
+
+.second-section p {
     text-align: center;
 }
 
@@ -233,16 +290,18 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     margin: 10px;
 }
 
-.second-section div div {
+.second-section div div { /* container */
     display: flex;
     flex: 1;
     flex-direction: column;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 15px;
+    border: 5px black solid;
+    background-color: var(--color1);
     padding: 3%;
     align-items: center;
     justify-content: center;
@@ -250,8 +309,12 @@ html, body {
     transition: transform 0.3s;
 }
 
-.container:hover{
-    transform: scale(1.05); 
+.second-section > *{
+    max-width: 1200px;
+}
+
+.container:hover {
+    transform: scale(1.05);
 }
 
 .container p {
@@ -260,21 +323,25 @@ html, body {
 }
 
 .container h3 {
-    font-weight: 400;
-    color: var(--color1);
+    font-family: "Rubik Mono One";
+    color: var(--fontColor1);
 }
 
 .container button {
     font-weight: 300;
     font-size: 14px;
-    border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 5px 10px 5px 10px;
-    background-color: var(--color1);
+    background-color: var(--color2);
+    transition: all 0.1s;
+    border: 2px solid transparent;
+    
 }
 
 .container button:hover {
-    background-color: #6c99c6;
+    background-color: var(--color2);
+    border: 2px solid black;
+    scale: 105%;
 }
 
 .container button a {
@@ -282,7 +349,6 @@ html, body {
 }
 
 /* Third section */
-
 .third-section {
     display: flex;
     flex-direction: column;
@@ -300,14 +366,16 @@ html, body {
 .third-section button {
     font-weight: 300;
     font-size: 16px;
-    border: none;
+    border: 2px transparent solid;
     border-radius: 15px;
     padding: 8px 15px 8px 15px;
     background-color: var(--color1);
+    transition: all 0.1s;
 }
 
 .third-section button:hover {
-    background-color: #6c99c6;
+    background-color: var(--color2);
+    border: 2px black solid;
 }
 
 .third-section button a {
@@ -321,23 +389,49 @@ html, body {
 }
 
 /* Responsive of all sections */
+@media screen and (max-width: 1450px) {
+    .titles h1 {
+        font-size: 80px;
+    }
+
+    .titles p {
+        font-size: 15px;
+    }
+
+    .header-body::after {
+        top: 150px;
+        left: 460px;
+        width: 400px;
+        height: 200px;
+    }
+
+    .header-body h1 {
+        max-width: 500px;
+    }
+}
 
 @media screen and (max-width: 1000px) {
     .titles h1 {
         font-size: 80px;
     }
-    
+
     .titles p {
         font-size: 15px;
     }
 
+    .header-body::after {
+        top: 300px;
+        left: 300px;
+        width: 400px;
+        height: 200px;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .titles h1 {
         font-size: 50px;
     }
-    
+
     .titles p {
         font-size: 15px;
     }
@@ -346,18 +440,22 @@ html, body {
         flex-direction: column;
     }
 
-    .second-section-pregunta, .third-section h2 {
+    .second-section-pregunta,
+    .third-section h2 {
         font-size: 30px;
     }
 
-    .second-section-respuesta, .third-section p {
+    .second-section-respuesta,
+    .third-section p {
         padding: 0 8px 0 8px;
     }
 
-    .container p, .second-section p, .third-section p {
+    .container p,
+    .second-section p,
+    .third-section p {
         font-size: 13px;
     }
-    
+
     .container h3 {
         font-size: 15px;
     }
@@ -367,7 +465,7 @@ html, body {
     }
 
     .second-section div {
-        align-items: center;
+        align-items: stretch;
     }
 
     .third-section button {
@@ -376,27 +474,90 @@ html, body {
         border-radius: 10px;
         padding: 5px 10px 5px 10px;
     }
+
+    .header-body::after {
+        top: -10px;
+        left: 250px;
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .titles h1 {
+        font-size: 40px;
+    }
+
+    .titles p {
+        font-size: 15px;
+    }
+
+    .second-section div {
+        flex-direction: column;
+    }
+
+    .second-section-pregunta,
+    .third-section h2 {
+        font-size: 30px;
+    }
+
+    .second-section-respuesta,
+    .third-section p {
+        padding: 0 8px 0 8px;
+    }
+
+    .container p,
+    .second-section p,
+    .third-section p {
+        font-size: 13px;
+    }
+
+    .container h3 {
+        font-size: 15px;
+    }
+
+    .container button {
+        font-size: 10px;
+    }
+
+    .second-section div {
+        align-items: stretch;
+    }
+
+    .third-section button {
+        font-weight: 200;
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .header-body::after {
+        top: -20px;
+        left: 120px;
+        width: 200px;
+        height: 100px;
+    }
 }
 
 /* Footer */
-
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 26%;
     flex-wrap: wrap;
 
     min-height: 30vh;
     width: 100%;
-    column-gap: 10px;
-    background-color: #094d91B0;
+    background-color: var(--color1);
+    /*This had an opacity but sue me*/
     /* background: linear-gradient(36deg, #094d91 0%, rgba(146,189,87,1) 100%); */
 }
 
 .footer-socials {
     display: flex;
     flex-direction: column;
-    
+
     align-items: center;
     width: 190px;
 }
@@ -423,7 +584,7 @@ html, body {
 @media (max-width: 600px) {
     .footer {
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         row-gap: 20px;
     }
 }
@@ -431,18 +592,18 @@ html, body {
     margin: 20px 10px;
     border-left: 6px solid white;
     height: 30vh;
-  }
+}
 
 .logos {
     width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
+}
 
 .footer-socials li {
     list-style: none;
-    margin-top: 5px; 
+    margin-top: 5px;
 }
 
 .socials-div ul {
@@ -451,8 +612,8 @@ html, body {
     justify-content: space-around;
 }
 
-.socials-div li{
-    
+.socials-div li {
+
     font-weight: bold;
     display: inline;
     font-size: 1rem;
@@ -462,7 +623,13 @@ html, body {
 .footer-socials li a {
     color: var(--fontColor2);
     opacity: 80%;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    filter: drop-shadow(0px 2px 0px var(--color2));
+    &:hover{
+        filter: drop-shadow(0px 4px 1px var(--color2));
+        translate: 0px -4px;
+    };
+    transition: all 0.1s;
 }
 
 .socials-div li a {
@@ -484,13 +651,75 @@ html, body {
     position: relative;
     top: 10px;
     width: 140px
-    
 }
 .logo-cover {
-    height: 90px; 
+    height: 90px;
 }
 
 .x-logo {
     position: relative;
     top: 1px
+}
+
+/*
+               ▄▄▄   
+             ▄█   █▄ 
+             ▀█ █ █▀ 
+            ▄▀▀ █ ▀▀▄
+            █▒▒   ▒▒█
+            █▒▒▒▒▒▒▒█
+            ▀▄▄▄▄▄▄▄▀
+               █ █   
+              ▀▀ ▀▀  
+    Hey!, you found Kiwi the Kiwi :D
+*/
+
+/* Retos */
+.retos {
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 800px;
+
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.retos h2 {
+    margin-bottom: 0px;
+}
+.retos h3 {
+    font-family: "Rubik Mono One";
+    color: var(--color3);
+}
+.retos > p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.retos article p {
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.retos button {
+    font-weight: 300;
+    font-size: 16px;
+    border: 2px transparent solid;
+    border-radius: 15px;
+    padding: 8px 15px 8px 15px;
+    background-color: var(--color1);
+    transition: all 0.1s;
+}
+
+.retos button:hover {
+    background-color: var(--color2);
+    border: 2px black solid;
+}
+
+.retos button a {
+    color: var(--fontColor2);
+}
+
+#loadOverlay{
+    opacity: 0;
+    transition: all 1s;
+    pointer-events: none;
 }

@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css" class="res">
-    <link rel="stylesheet" href="../css/retos.css">
+    <link rel="stylesheet" href="../css/retos.css" class="res">
     <script src="https://kit.fontawesome.com/094d8d7db9.js" crossorigin="anonymous"></script>
-    <!-- Poppins Font -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>ORC</title>
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="ORC" />
+	<link rel="manifest" href="/favicon/site.webmanifest" />
 </head>
 <body>
     <div class="nav" id="nav">
@@ -20,41 +26,55 @@
             <li><a href="../equipo/equipo.html" class="nav-button">Equipo</a></li>
             <li><a href="retos.html" class="nav-button">Retos</a></li>
             <li><a href="../calendario/calendario.html" class="nav-button">Calendario</a></li>
-            <li><a href="https://docs.google.com/forms/d/1-GG4jfs8V_4SNcSYxb2LY-yjqomBWsSHNVS87-mgDyQ/edit" target="_blank" class="form-button">Apúntate</a></li>
+            <li><a href="https://r2.thecontesthub.com/1feb83da-8343-4244-88ef-4f3160642b49-Normas-y-reglamentos-de-la-ORC" class="nav-button">Normas</a></li>
+            <li><a href="https://thecontesthub.com/es/contests/olympic-robotic-challenge-orc?tab=details" target="_blank" class="form-button">Apúntate</a></li>
         </ul>
         <label for="check" class="icon-class">
             <i class="fas fa-bars" id="btn"></i>
-            <!-- <i class="fas fa-times" id="cancel"></i> -->
         </label>
     </div>
 
-    <section class="main">
-        <h2>Próximamente...</h2>
-        <p>Los retos se revelarán el primer día de la competición, se añadirán aquí cuando se hayan anunciado.</p>
+    <section class="retos">
+        <h2>Retos</h2>
+        <p>¿Logrará tu robot superar los siguientes retos?</p>
+
+        <article>
+            <h3>Laberinto</h3>
+            <p>Esta prueba se basa en que los robots recorran un laberinto de forma autónoma. El laberinto está conformado por una gran plataforma con paredes elevadas y líneas negras en el medio de los caminos. Para completar esta prueba se debe terminar todo el circuito sin salirse de las plataformas y sin quedarse trabado.</p>
+        </article>
+
+        <article>
+            <h3>Fútbol</h3>
+            <p>La prueba consiste en un torneo eliminatorio de partidos 1 contra 1. Cada partida dura hasta tres minutos o al mejor de tres puntos. Los robots pueden ser autónomos o controlados a distancia. Se deberán evitar choques directos contra el contrario bajo penalización de descalificación tras tres infracciones.</p>
+        </article>
+
+        <article>
+            <h3>Velocidad</h3>
+            <p>Consiste en recorrer un circuito de plataformas con curvas y rectas en el menor tiempo posible. El movimiento deberá ser completamente autónomo, y para finalizar el circuito se debe evitar salirse de las plataformas o quedarse trabado.</p>
+        </article>
+
+        <article>
+            <h3>Obstáculos</h3>
+            <p>En esta prueba se deben sortear varios obstáculos mientras se premia la velocidad. Solo se admitirán robots autónomos. La prueba se considera completada si el robot llega al final sin derribar obstáculos, salirse de la plataforma o quedarse trabado.</p>
+        </article>
+        <button><a href="https://r2.thecontesthub.com/1feb83da-8343-4244-88ef-4f3160642b49-Normas-y-reglamentos-de-la-ORC" target="_blank">Más información</a></button>
+
     </section>
 
     <section class="footer">
         <div class="footer-socials">
             <p class="titles footer-title">Información</p>
             <ul>
-               <li><a href="../equipo/equipo.html">Equipos</a></li>
-               <li><a href="retos.html">Retos</a></li> 
-               <li><a href="../calendario/calendario.html">Calendario</a></li> 
-            </ul>
-        </div>
-        <div class="footer-socials socials-div">
-            <div class="logo-cover"><a target="_blank" href="https://www.acm.webs.upv.es"><img class="acm-logo" src="../img/acmLogo.png" ></a></div>
-
-            <ul>
-                <li><a target="_blank" class="fa-brands fa-x-twitter" href="https://twitter.com/acmupv"></a></li>
-                <li><a target="_blank" class="fa fa-github" href="https://github.com/acmupv"></a></li>
-                <li><a target="_blank" class="fa fa-linkedin" href="https://es.linkedin.com/company/acmupv"></a></li>
-                <li><a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/acmupv/"></a></li>
+                <li><a href="../equipo/equipo.html">Equipos</a></li>
+                <li><a href="retos.html">Retos</a></li>
+                <li><a href="../calendario/calendario.html">Calendario</a></li>
             </ul>
         </div>
 
         <div class="footer-socials socials-div">
-            <div class="logo-cover"><a target="_blank" href="https://makersupv.com"><img class="makers-logo" src="../img/makersLogo.png" ></a></div>
+            <div class="logo-cover">
+                <a target="_blank" href="https://makersupv.com"><img class="makers-logo" src="../img/makersLogo.png"></a>
+            </div>
 
             <ul>
                 <li><a target="_blank" class="fa-brands fa-x-twitter" href="https://twitter.com/makersupv"></a></li>
@@ -62,8 +82,6 @@
                 <li><a target="_blank" class="fa fa-linkedin" href="https://www.linkedin.com/company/makers-upv/"></a></li>
                 <li><a target="_blank" class="fa fa-instagram" href="https://www.instagram.com/makersupv/"></a></li>
             </ul>
-        </div>
-        <div class="logos ">
         </div>
     </section>
     <script src="../js/index.js"></script>
