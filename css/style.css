@@ -547,7 +547,7 @@ body {
     gap: 26%;
     flex-wrap: wrap;
 
-    min-height: 30vh;
+    min-height: 35vh;
     width: 100%;
     background-color: var(--color1);
     /*This had an opacity but sue me*/
@@ -557,6 +557,7 @@ body {
 .footer-socials {
     display: flex;
     flex-direction: column;
+    height: min-content;
 
     align-items: center;
     width: 190px;
@@ -594,11 +595,14 @@ body {
     height: 30vh;
 }
 
-.logos img {
-    width: 100%;
+.logos {
     display: flex;
-    flex-direction: row;
+    height: min-content;
     justify-content: center;
+}
+.logos img {
+    width: 80%;
+    height: auto;
 }
 
 .widthLimit {
