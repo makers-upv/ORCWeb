@@ -148,7 +148,7 @@
     }
   }
 
-  @media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 600px) {
     .calendar {
       margin: 10px 4px;
       gap: 2px;
@@ -180,4 +180,4 @@
       width: max-content;
       --timeHeight: 45px;
     }
-  }
+  } */
