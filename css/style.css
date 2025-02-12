@@ -547,7 +547,7 @@ body {
     gap: 26%;
     flex-wrap: wrap;
 
-    min-height: 30vh;
+    min-height: 35vh;
     width: 100%;
     background-color: var(--color1);
     /*This had an opacity but sue me*/
@@ -557,6 +557,7 @@ body {
 .footer-socials {
     display: flex;
     flex-direction: column;
+    height: min-content;
 
     align-items: center;
     width: 190px;
@@ -595,10 +596,24 @@ body {
 }
 
 .logos {
-    width: 100vw;
+    display: flex;
+    height: min-content;
+    justify-content: center;
+}
+.logos img {
+    width: 80%;
+    height: auto;
+}
+
+.widthLimit {
+    max-width: 800px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    justify-content: space-between;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .footer-socials li {
@@ -676,12 +691,12 @@ body {
 
 /* Retos */
 .retos {
-    margin-left: 10%;
-    margin-right: 10%;
-    max-width: 800px;
-
-    margin-top: 200px;
-    margin-bottom: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+	width: 80%;
 }
 .retos h2 {
     margin-bottom: 0px;
