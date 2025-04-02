@@ -613,7 +613,7 @@ body {
     justify-content: space-between;
     row-gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .footer-socials li {
